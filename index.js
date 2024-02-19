@@ -22,6 +22,10 @@ const authenticateKey = (req, res, next) => {
     next();
 };
 
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+  });
+
 app.use(authenticateKey);
 
 
@@ -98,9 +102,6 @@ app.get('/getfeatured/rating/:ratinglimit',async(req,res)=>{
 })
 
 
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-  });
 
 const PORT=3000;
 const start=async()=>{
